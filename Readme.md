@@ -1,6 +1,6 @@
 # ArcGIS Route Test
 
-ArcGIS Route Test is a simple wrapper class / example for interfacing with Esri network analyst services. 
+ArcGIS Route Test is a simple wrapper class / example for interfacing with Esri network analyst services. Includes console application for testing / prototyping. 
 
 ### Development
 
@@ -12,6 +12,7 @@ Requirements:
 
 IMPORTANT 
 
+- Some of the tools you will use reference data in different coordinate systems. It is very important to carefully review the data prior to proceeding. Not following proper procedures for projection translation will lead to differences in accuracy. This is true when dealing with data sourced from CAD, Google, and the City / SanGIS GIS data warehouse. 
 - You should *always* explicitly specify the correct input spatial reference for each of the coordinates you pass in. 
 Even if the coordinates look the same you should still explicitly set a value if it is different from the service, which is in [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/).
 - [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/) is not the same as the projection that CAD is in, which is [GCS_North_American_1983 (WKID 4269)](http://spatialreference.org/ref/epsg/nad83/). All you need to do is specify the correct input spatial reference and the service will translate for you. 
@@ -20,6 +21,12 @@ If you're using Google as a locator then you're going to get coordinates returne
 - Please confirm both the name and WKID of CAD's coordinate type internally to make certain this is correct. 
 
 ### Resources
+
+Please consult the following resources if you have questions regarding coordinate systems and how to reproject / convert:
+
+- **[Projecting to different spatial references - Guide](https://developers.arcgis.com/net/10-2/desktop/guide/geometry-operations.htm#ESRI_SECTION2_98BDBE00EC5243F1BFA85323E76CCE4F)
+- [Geometry Operations - Guide](https://developers.arcgis.com/net/10-2/desktop/guide/geometry-operations.htm)
+- [Spatial references - Overview](https://developers.arcgis.com/net/10-2/desktop/guide/spatial-references.htm)
 
 Please consult the following resources for tips on how to develop for ArcGIS Network Analysis Services.
 
