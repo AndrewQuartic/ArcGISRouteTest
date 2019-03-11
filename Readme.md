@@ -18,7 +18,7 @@ Even if the coordinates look the same you should still explicitly set a value if
 
   Example - *Same* sample point in 4 different systems, formatted as EsriJson:
 
-  GCS_North_American_1983 (4269) - aka CAD coordinates
+  GCS_North_American_1983 (4269) - *CAD coordinates*
   ```
   {"geometries": [{
      "x": -117.0670431809381,
@@ -32,7 +32,7 @@ Even if the coordinates look the same you should still explicitly set a value if
      "y": 32.76135209262446
   }]}
   ```
-  NAD_1983_StatePlane_California_VI (2230)
+  NAD_1983_StatePlane_California_VI (2230) - *City / SanGIS coordinates in Atlas*
   ```
   {"geometries": [{
      "x": 6310487.005141617,
