@@ -18,28 +18,28 @@ Even if the coordinates look the same you should still explicitly set a value if
 
   Example - *Same* sample point in 4 different systems, formatted as EsriJson:
 
-  GCS_North_American_1983 (4269) - *CAD coordinates*
+  GCS_North_American_1983 (4269) - *CAD Coordinate System*
   ```
   {"geometries": [{
      "x": -117.0670431809381,
      "y": 32.761347321543
   }]}
   ```
-  GCS_WGS_1984 (4326) - *Google Earth*
+  GCS_WGS_1984 (4326) - *Google Earth Coordinate System*
   ```
   {"geometries": [{
      "x": -117.06705506901389,
      "y": 32.76135209262446
   }]}
   ```
-  NAD_1983_StatePlane_California_VI (2230) - *City / SanGIS coordinates in Atlas*
+  NAD_1983_StatePlane_California_VI (2230) - *City of SD, County of SD, SanGIS Coordinate System*
   ```
   {"geometries": [{
      "x": 6310487.005141617,
      "y": 1857778.0038371873
   }]}
   ```
-  WGS_1984_Web_Mercator_Aux (102100 / 3857) - *Google Maps Coordinate*
+  WGS_1984_Web_Mercator_Aux (102100 / 3857) - *Google Maps Coordinate System*
   ```
   {"geometries": [{
      "x": -13031844.958950741,
