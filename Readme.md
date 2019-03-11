@@ -12,7 +12,7 @@ Requirements:
 
 IMPORTANT 
 
-- Some of the tools you will use reference data in different coordinate systems. Not following proper procedures for projection translation will lead to differences in accuracy. This is true when dealing with data sourced from CAD, Google, and the City / SanGIS GIS data warehouse. 
+- Some of the tools you will use reference data in different coordinate systems. It is very important to carefully review the data prior to proceeding. Not following proper procedures for projection translation will lead to differences in accuracy. This is true when dealing with data sourced from CAD, Google, and the City / SanGIS GIS data warehouse. 
 - You should *always* explicitly specify the correct input spatial reference for each of the coordinates you pass in. 
 Even if the coordinates look the same you should still explicitly set a value if it is different from the service, which is in [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/).
 - [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/) is not the same as the projection that CAD is in, which is [GCS_North_American_1983 (WKID 4269)](http://spatialreference.org/ref/epsg/nad83/). All you need to do is specify the correct input spatial reference and the service will translate for you. 
