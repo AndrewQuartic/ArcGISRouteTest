@@ -10,13 +10,13 @@ Requirements:
 - [ArcGIS Runtime 100.2.1](https://www.nuget.org/packages/Esri.ArcGISRuntime/100.2.1)
 - Visual Studio 2015 or above
 
-IMPORTANT 
+#### IMPORTANT 
 
 - Some of the tools you will use reference data in different coordinate systems. It is very important to carefully review the data prior to proceeding. Not following proper procedures for projection translation will lead to differences in accuracy. This is true when dealing with data sourced from CAD, Google, and the City / SanGIS GIS data warehouse. 
 - You should *always* explicitly specify the correct input spatial reference for each of the coordinates you pass in. 
 Even if the coordinates look the same you should still explicitly set a value if it is different from the service, which is in [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/).
 
-  Example - *Same* sample point in 4 different systems, formatted as EsriJson:
+  ##### Example - *Same* sample point in 4 different systems, formatted as EsriJson:
 
   GCS_North_American_1983 (4269) - *CAD Coordinate System*
   ```
