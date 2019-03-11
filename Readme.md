@@ -1,6 +1,6 @@
 # ArcGIS Route Test
 
-ArcGIS Route Test is a simple wrapper class / example for interfacing with Esri network analyst services. 
+ArcGIS Route Test is a simple wrapper class / example for interfacing with Esri network analyst services. Includes console application for testing / prototyping. 
 
 ### Development
 
