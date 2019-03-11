@@ -18,34 +18,34 @@ Even if the coordinates look the same you should still explicitly set a value if
 
   Example - Sample point in 4 different systems:
   
-  '''
   GCS_WGS_1984
+  ```
   {"geometries": [{
      "x": -117.06705506901389,
      "y": 32.76135209262446
   }]}
-  '''
-  '''
+  ```
   GCS_North_American_1983
+  ```
   {"geometries": [{
      "x": -117.0670431809381,
      "y": 32.761347321543
   }]}
-  '''
-  '''
+  ```
   WGS_1984_Web_Mercator_Aux
+  ```
   {"geometries": [{
      "x": -13031844.958950741,
      "y": 3863670.1178109264
   }]}
-  '''
-  '''
+  ```
   NAD_1983_StatePlane_California_VI
+  ```
   {"geometries": [{
      "x": 6310487.005141617,
      "y": 1857778.0038371873
   }]}
-  '''
+  ```
   
 - [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/) is not the same as the projection that CAD is in, which is [GCS_North_American_1983 (WKID 4269)](http://spatialreference.org/ref/epsg/nad83/). All you need to do is specify the correct input spatial reference and the service will translate for you. 
 - If you are using the composite geocoder we provided you it will return coordinates in [NAD_1983_StatePlane_California_VI_FIPS_0406_Feet (WKID 2230)](http://spatialreference.org/ref/esri/nad-1983-stateplane-california-vi-fips-0406-feet/). You must identify this before matching it with CAD coordinates.
