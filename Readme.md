@@ -25,7 +25,7 @@ Even if the coordinates look the same you should still explicitly set a value if
      "y": 32.761347321543
   }]}
   ```
-  GCS_WGS_1984 (4326)
+  GCS_WGS_1984 (4326) - *Google Earth*
   ```
   {"geometries": [{
      "x": -117.06705506901389,
@@ -39,7 +39,7 @@ Even if the coordinates look the same you should still explicitly set a value if
      "y": 1857778.0038371873
   }]}
   ```
-  WGS_1984_Web_Mercator_Aux (102100)
+  WGS_1984_Web_Mercator_Aux (102100 / 3857) - *Google Maps Coordinate*
   ```
   {"geometries": [{
      "x": -13031844.958950741,
