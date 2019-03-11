@@ -19,7 +19,7 @@ namespace ArcGISRouteTest
         /// <param name="args">Optional command line arguments.</param>
         private static void Main(string[] args)
         {
-            routeUtil = new RouteUtility(routeService, SpatialRefTypes.GCS_WGS_1984);
+            routeUtil = new RouteUtility(routeService, SpatialRefTypes.GCS_North_American_1983);
             RunRouteTask();
             Console.ReadLine();
         }
@@ -30,21 +30,14 @@ namespace ArcGISRouteTest
         /// </summary>
         private static async void RunRouteTask()
         {
-            routeUtil.AddStop(-117.06705506901389, 32.76135209262446, SpatialRefTypes.GCS_WGS_1984); // College & El Cajon
-            routeUtil.AddStop(-117.06933297145534, 32.770418157877245, SpatialRefTypes.GCS_WGS_1984);
+            routeUtil.AddStop(-117.0670431809381, 32.761347321543, SpatialRefTypes.GCS_North_American_1983); // College & El Cajon
+            routeUtil.AddStop(-117.06932108233752, 32.77041338583157, SpatialRefTypes.GCS_North_American_1983);
             var result = await routeUtil.Solve();
             Console.WriteLine(result.ToString());
 
-            routeUtil.AddStop(-117.05741639463984, 32.77610020313963, SpatialRefTypes.GCS_WGS_1984); // Alvarado Hospital
+            routeUtil.AddStop(-117.05740450717408, 32.77609542980793, SpatialRefTypes.GCS_North_American_1983); // Alvarado Hospital
             result = await routeUtil.Solve();
             Console.WriteLine(result.ToString());
-
-            /*
-            routeUtil.AddBarrier(-13031844.958950741, 3863670.1178109264, 102100); // College & El Cajon
-            routeUtil.AddBarrier(-13030429.313097086, 3864592.621714865, 102100); // El Cajon & Montezuma
-            result = await routeUtil.Solve();
-            Console.WriteLine(result.ToString());
-            */
         }
     }
 }
