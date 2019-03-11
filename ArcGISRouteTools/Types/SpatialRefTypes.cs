@@ -11,6 +11,7 @@ namespace ArcGISRouteTools.Types
         GCS_WGS_1984 = 4326,
         GCS_WGS_1984_Major_Auxiliary_Sphere = 104199,
         WGS_1984_Web_Mercator = 102113,
-        WGS_1984_Web_Mercator_Auxiliary_Sphere = 102100,
+        WGS_1984_Web_Mercator_Aux = 102100,
+        NAD_1983_StatePlane_California_VI = 2230
     }
 }

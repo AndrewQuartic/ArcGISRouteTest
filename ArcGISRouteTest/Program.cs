@@ -13,14 +13,13 @@ namespace ArcGISRouteTest
     {
         public const string routeService = "http://webmapsdev.sandiego.gov/arcgis/rest/services/FireDispatch/Fire_RoadNetService/NAServer/Route";
         private static RouteUtility routeUtil = null;
-
         /// <summary>
         /// Main entrypoint for application. Initializes RouteUtility class and solves an example route.
         /// </summary>
         /// <param name="args">Optional command line arguments.</param>
         private static void Main(string[] args)
         {
-            routeUtil = new RouteUtility(routeService, SpatialRefTypes.GCS_North_American_1983);
+            routeUtil = new RouteUtility(routeService, SpatialRefTypes.WGS_1984_Web_Mercator_Aux);
             RunRouteTask();
             Console.ReadLine();
         }
@@ -31,12 +30,12 @@ namespace ArcGISRouteTest
         /// </summary>
         private static async void RunRouteTask()
         {
-            routeUtil.AddStop(32.811467, 117.150312, 102100); // station 10
-            routeUtil.AddStop(-13032098.5338906, 3864870.31162168, 102100);
+            routeUtil.AddStop(-13031844.958950741, 3863670.1178109264, SpatialRefTypes.WGS_1984_Web_Mercator_Aux); // College & El Cajon
+            routeUtil.AddStop(-13032098.5338906, 3864870.31162168, SpatialRefTypes.WGS_1984_Web_Mercator_Aux);
             var result = await routeUtil.Solve();
             Console.WriteLine(result.ToString());
 
-            routeUtil.AddStop(-13030771.9866275, 3865622.58069907, 102100); // Alvarado Hospital
+            routeUtil.AddStop(-13030771.9866275, 3865622.58069907, SpatialRefTypes.WGS_1984_Web_Mercator_Aux); // Alvarado Hospital
             result = await routeUtil.Solve();
             Console.WriteLine(result.ToString());
 
